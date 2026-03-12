@@ -1,42 +1,78 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>متجر فجر</title>
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-font-family:Arial;
-background:#0b1a2a;
+font-family:Arial, sans-serif;
 color:white;
 text-align:center;
-margin:0;
-padding:0;
+min-height:100vh;
+
+/* خلفية الفجر */
+background:
+radial-gradient(circle at 50% 110%, rgba(255,120,0,0.55), transparent 40%),
+radial-gradient(circle at 50% 120%, rgba(255,80,0,0.35), transparent 45%),
+linear-gradient(180deg,#142a52 0%, #0b1a2a 40%, #050a15 100%);
+
+position:relative;
+overflow-x:hidden;
 }
 
-header{
-padding:20px;
-font-size:40px;
-color:#ffb347;
+/* النجوم */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background-image:
+radial-gradient(2px 2px at 10% 20%, white, transparent),
+radial-gradient(2px 2px at 25% 15%, white, transparent),
+radial-gradient(2px 2px at 40% 25%, white, transparent),
+radial-gradient(2px 2px at 60% 18%, white, transparent),
+radial-gradient(2px 2px at 75% 10%, white, transparent),
+radial-gradient(2px 2px at 85% 22%, white, transparent),
+radial-gradient(2px 2px at 50% 12%, white, transparent);
+opacity:.8;
 }
 
+/* شريط علوي */
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+background:#081321;
+font-size:22px;
+}
+
+.cart-btn{
+cursor:pointer;
+background:#ff8a00;
+padding:8px 14px;
+border-radius:8px;
+}
+
+/* المنتجات */
 .products{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:30px;
-padding:20px;
+padding:40px 20px;
 }
 
 .card{
 background:#142a44;
 padding:15px;
 border-radius:15px;
-width:230px;
-box-shadow:0 0 15px rgba(0,0,0,0.4);
+width:240px;
+box-shadow:0 0 15px rgba(0,0,0,.4);
 }
 
 .card img{
@@ -58,25 +94,14 @@ border-radius:8px;
 cursor:pointer;
 color:white;
 font-size:14px;
+margin:5px;
 }
 
 button:hover{
 background:#ff6a00;
 }
 
-.topbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:10px 20px;
-background:#081321;
-}
-
-.cart{
-cursor:pointer;
-font-size:18px;
-}
-
+/* السلة */
 .cart-box{
 position:fixed;
 top:0;
@@ -86,7 +111,8 @@ height:100%;
 background:#081321;
 padding:20px;
 transform:translateX(-100%);
-transition:0.3s;
+transition:.3s;
+overflow:auto;
 }
 
 .cart-box.active{
@@ -95,13 +121,14 @@ transform:translateX(0);
 
 .cart-item{
 margin:10px 0;
+border-bottom:1px solid #333;
+padding-bottom:6px;
 }
 
 .whatsapp{
-margin-top:20px;
 background:#25D366;
+margin-top:10px;
 }
-
 </style>
 </head>
 
@@ -109,18 +136,17 @@ background:#25D366;
 
 <div class="topbar">
 <div>🌅 متجر فجر</div>
-<div class="cart" onclick="toggleCart()">🛒 السلة (<span id="count">0</span>)</div>
+<div class="cart-btn" onclick="toggleCart()">🛒 السلة (<span id="count">0</span>)</div>
 </div>
 
 <div class="cart-box" id="cartBox">
 <h2>السلة</h2>
 <div id="cartItems"></div>
 <p>الإجمالي: <span id="total">0</span> ريال</p>
-
 <button class="whatsapp" onclick="sendOrder()">إرسال الطلب واتساب</button>
 </div>
 
-<header>المنتجات</header>
+<h1 style="margin-top:30px;color:#ffb347;">المنتجات</h1>
 
 <div class="products">
 
@@ -147,75 +173,4 @@ background:#25D366;
 
 <div class="card">
 <img src="fajr-dawn-rise.jpeg">
-<h3>الفجر المشتعل</h3>
-<p class="price">99 ريال</p>
-<button onclick="addCart('الفجر المشتعل',99)">إضافة للسلة</button>
-</div>
-
-</div>
-
-<script>
-
-let cart=[]
-
-function addCart(name,price){
-
-cart.push({name,price})
-
-updateCart()
-
-}
-
-function updateCart(){
-
-let items=document.getElementById("cartItems")
-let total=0
-
-items.innerHTML=""
-
-cart.forEach(p=>{
-
-total+=p.price
-
-items.innerHTML+=`<div class="cart-item">${p.name} - ${p.price} ريال</div>`
-
-})
-
-document.getElementById("total").innerText=total
-document.getElementById("count").innerText=cart.length
-
-}
-
-function toggleCart(){
-
-document.getElementById("cartBox").classList.toggle("active")
-
-}
-
-function sendOrder(){
-
-if(cart.length==0){
-alert("السلة فارغة")
-return
-}
-
-let message="طلب جديد من متجر فجر:%0A"
-
-cart.forEach(p=>{
-message+=`${p.name} - ${p.price} ريال%0A`
-})
-
-let total=cart.reduce((a,b)=>a+b.price,0)
-
-message+=`%0Aالإجمالي: ${total} ريال`
-message+=`%0Aالدفع تحويل بنكي`
-message+=`%0Aالآيبان: SA6430100991104941618846`
-
-window.open(`https://wa.me/966548659564?text=${message}`)
-
-}
-
-</script>
-
-</body>
-</html>
+<h3>المؤسس
