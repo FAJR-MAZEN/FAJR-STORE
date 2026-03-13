@@ -687,9 +687,9 @@ textarea.rfld{height:65px;resize:none}
           <div class="icon" style="background:rgba(37,211,102,.12)">&#128241;</div>
           <div class="info"><strong>واتساب</strong><span>+966 54 865 9564</span></div>
         </a>
-        <a href="mailto:fajr38799@gmail.com" class="footer-contact-card">
+        <a href="/cdn-cgi/l/email-protection#90f6f1fae2a3a8a7a9a9d0f7fdf1f9fcbef3fffd" class="footer-contact-card">
           <div class="icon" style="background:rgba(0,212,255,.1)">&#128231;</div>
-          <div class="info"><strong>البريد الإلكتروني</strong><span>fajr38799@gmail.com</span></div>
+          <div class="info"><strong>البريد الإلكتروني</strong><span><span class="__cf_email__" data-cfemail="0a6c6b607839323d33334a6d676b636624696567">[email&#160;protected]</span></span></div>
         </a>
       </div>
       <div class="footer-col">
@@ -799,9 +799,9 @@ textarea.rfld{height:65px;resize:none}
       <div class="cntico" style="background:rgba(37,211,102,.12)">&#128241;</div>
       <div class="cntil"><strong id="cwa">واتساب</strong><span>+966 54 865 9564</span></div>
     </a>
-    <a href="mailto:fajr38799@gmail.com" class="cntcard">
+    <a href="/cdn-cgi/l/email-protection#e187808b93d2d9d6d8d8a1868c80888dcf828e8c" class="cntcard">
       <div class="cntico" style="background:rgba(0,212,255,.1)">&#128231;</div>
-      <div class="cntil"><strong id="cem">البريد الإلكتروني</strong><span>fajr38799@gmail.com</span></div>
+      <div class="cntil"><strong id="cem">البريد الإلكتروني</strong><span><span class="__cf_email__" data-cfemail="d0b6b1baa2e3e8e7e9e990b7bdb1b9bcfeb3bfbd">[email&#160;protected]</span></span></div>
     </a>
     <div class="cntcard">
       <div class="cntico" style="background:rgba(255,215,0,.1)">&#128336;</div>
@@ -1046,7 +1046,7 @@ textarea.rfld{height:65px;resize:none}
 </div>
 
 <!-- ==================== JAVASCRIPT ==================== -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 'use strict';
 
 // ==================== CONSTANTS ====================
@@ -1057,7 +1057,7 @@ var WA_NUMBER = '966548659564';
 
 // ==================== PRODUCTS ====================
 var PRODS = [
-  {id:0, cat:'basic',   price:LAUNCH_PRICE,
+  {id:0, cat:'basic',   price:135,
    nAr:'الكل في واحد', nEn:'All in One',
    bAr:'الأكثر مبيعاً', bEn:'Best Seller', bCls:'bh',
    dAr:'التركيبة الأساسية الشاملة من فجر. 22 مكوناً طبيعياً لدعم الطاقة والتركيز طوال اليوم.',
@@ -1254,19 +1254,19 @@ function calcOrder(){
 // ==================== RENDER ALL ====================
 // ====== DRINK PRODUCTS (Coming Soon) ======
 var DRINKS = [
-  {id:0, nAr:'باقة فجر الثلاثية', nEn:'FAJR Triple Pack',
+  {id:0, price:45, nAr:'باقة فجر الثلاثية', nEn:'FAJR Triple Pack',
    tagAr:'🔥❄️🌅 المجموعة الكاملة', tagEn:'🔥❄️🌅 Full Collection',
    dAr:'Flame Fire + Icy Mint + Dawn — الثلاثة نكهات في باقة واحدة',
    dEn:'All three flavors in one pack'},
-  {id:1, nAr:'فجر فليم فاير', nEn:'FAJR Flame Fire',
+  {id:1, price:15, nAr:'فجر فليم فاير', nEn:'FAJR Flame Fire',
    tagAr:'🔥 طاقة وقوة', tagEn:'🔥 Energy & Power',
    dAr:'زنجبيل + كاكاو | Taurine · L-Tyrosine · B12 · Niacin',
    dEn:'Ginger + Cacao | Taurine · L-Tyrosine · B12 · Niacin'},
-  {id:2, nAr:'فجر آيسي مينت', nEn:'FAJR Icy Mint',
+  {id:2, price:15, nAr:'فجر آيسي مينت', nEn:'FAJR Icy Mint',
    tagAr:'❄️ تركيز هادئ', tagEn:'❄️ Calm Focus',
    dAr:'نعناع + ليمون | L-Theanine · Citicoline · Alpha-GPC',
    dEn:'Mint + Lemon | L-Theanine · Citicoline · Alpha-GPC'},
-  {id:3, nAr:'فجر داون', nEn:'FAJR Dawn',
+  {id:3, price:15, nAr:'فجر داون', nEn:'FAJR Dawn',
    tagAr:'🌅 طاقة طبيعية', tagEn:'🌅 Natural Energy',
    dAr:'تمر + عسل | Chaga · Bacopa · Ginkgo · Honey · Date',
    dEn:'Date + Honey | Chaga · Bacopa · Ginkgo · Honey · Date'}
@@ -1289,7 +1289,7 @@ function renderDrinks(){
       '<span class="drink-tag">'+tg+'</span>'+
       '<div class="pcd" style="margin-top:5px">'+ds+'</div>'+
       '<div class="pcfoot">'+
-      '<div style="font-size:11px;color:var(--muted);font-weight:700">'+(AR?'مشروب طاقة':'Energy Drink')+'</div>'+
+      '<div style="font-size:15px;font-weight:900;color:var(--gold)">'+d.price+'<small style="font-size:11px;color:var(--muted)"> '+(AR?'ريال':'SAR')+'</small></div>'+
       '<button class="pcadd" style="opacity:.3;cursor:not-allowed" disabled>+</button>'+
       '</div></div></div>';
   }
@@ -2074,15 +2074,4 @@ margin-top:20px;
 <p>✔ L-Tyrosine — شهادة تحليل معتمدة</p>
 <p>✔ L-Theanine — شهادة تحليل معتمدة</p>
 <p>✔ Alpha-GPC — شهادة تحليل معتمدة</p>
-<p>✔ Citicoline (Cognizin) — شهادة تحليل معتمدة</p>
-<p>✔ Bacopa Monnieri (Synapsa) — شهادة تحليل معتمدة</p>
-<p>✔ Ginkgo Biloba — شهادة تحليل معتمدة</p>
-<p>✔ Green Tea Extract — شهادة تحليل معتمدة</p>
-<p>✔ Beta-Glucan — شهادة تحليل معتمدة</p>
-<p>✔ Chaga Mushroom — شهادة تحليل معتمدة</p>
-
-</div>
-
-</section>
-</body>
-</html>
+<p>✔ Citicoline (Cognizin) — شهادة تحليل معتم�
