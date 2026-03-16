@@ -1210,10 +1210,20 @@ function getImg(id) {
 
 // ==================== BOOT ====================
 window.addEventListener('load', function(){
-  renderAll();
-  initScrollReveal();
-  loadWishFromStorage();
-  setTimeout(function(){ document.getElementById('ldr').classList.add('hide'); }, 1400);
+
+  try{
+    renderAll();
+    initScrollReveal();
+    loadWishFromStorage();
+  }catch(e){
+    console.log("FAJR error:", e);
+  }
+
+  setTimeout(function(){
+    const l=document.getElementById('ldr');
+    if(l) l.classList.add('hide');
+  },1200);
+
 });
 
 // ==================== SCROLL REVEAL (Intersection Observer) ====================
@@ -1872,9 +1882,6 @@ function applyLang(){
   document.getElementById('chprem').textContent = AR ? 'فاخر' : 'Premium';
   document.getElementById('chlim').textContent  = AR ? 'محدود' : 'Limited';
   document.getElementById('chnew').textContent  = AR ? 'جديد' : 'New';
-  document.getElementById('singr').innerHTML    = AR ? 'مكوناتنا <span>الطبيعية</span>' : 'Natural <span>Ingredients</span>';
-  document.getElementById('ibttl').textContent  = AR ? '22 مكوناً مدعوماً علمياً' : '22 Science-Backed Ingredients';
-  document.getElementById('ibsub').textContent  = AR ? 'كل مكون بجرعة مدروسة' : 'Every ingredient at research-proven doses';
   document.getElementById('swhy').innerHTML     = AR ? 'لماذا <span>فجر؟</span>' : 'Why <span>FAJR?</span>';
   document.getElementById('sadvs').innerHTML    = AR ? 'مميزاتنا <span>الحصرية</span>' : 'Exclusive <span>Advantages</span>';
   document.getElementById('srevs').innerHTML    = AR ? 'آراء <span>عملائنا</span>' : 'Customer <span>Reviews</span>';
