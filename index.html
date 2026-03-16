@@ -654,7 +654,13 @@ textarea.rfld{height:65px;resize:none}
   </div>
   <div class="pgrid" id="dgrid"></div>
 
- 
+  <div class="sp"></div>
+  <div class="sh reveal"><div class="sht" id="singr">مكوناتنا <span>الطبيعية</span></div></div>
+  <div class="ibox reveal">
+    <div class="ibttl" id="ibttl">22 مكوناً مدعوماً علمياً</div>
+    <div class="ibsub" id="ibsub">كل مكون بجرعة مدروسة</div>
+    <div class="ichips" id="ichips"></div>
+  </div>
 
   <div class="sp"></div>
   <div class="sh reveal"><div class="sht" id="swhy">لماذا <span>فجر؟</span></div></div>
@@ -1866,7 +1872,9 @@ function applyLang(){
   document.getElementById('chprem').textContent = AR ? 'فاخر' : 'Premium';
   document.getElementById('chlim').textContent  = AR ? 'محدود' : 'Limited';
   document.getElementById('chnew').textContent  = AR ? 'جديد' : 'New';
-  
+  document.getElementById('singr').innerHTML    = AR ? 'مكوناتنا <span>الطبيعية</span>' : 'Natural <span>Ingredients</span>';
+  document.getElementById('ibttl').textContent  = AR ? '22 مكوناً مدعوماً علمياً' : '22 Science-Backed Ingredients';
+  document.getElementById('ibsub').textContent  = AR ? 'كل مكون بجرعة مدروسة' : 'Every ingredient at research-proven doses';
   document.getElementById('swhy').innerHTML     = AR ? 'لماذا <span>فجر؟</span>' : 'Why <span>FAJR?</span>';
   document.getElementById('sadvs').innerHTML    = AR ? 'مميزاتنا <span>الحصرية</span>' : 'Exclusive <span>Advantages</span>';
   document.getElementById('srevs').innerHTML    = AR ? 'آراء <span>عملائنا</span>' : 'Customer <span>Reviews</span>';
