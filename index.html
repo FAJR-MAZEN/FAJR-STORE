@@ -652,15 +652,7 @@ textarea.rfld{height:65px;resize:none}
     <div class="drinks-sep-lbl">🥤 FAJR DRINKS — قريباً</div>
     <div class="drinks-sep-line"></div>
   </div>
-  <div class="pgrid" id="dgrid"></div>
-
-  <div class="sp"></div>
-  <div class="sh reveal"><div class="sht" id="singr">مكوناتنا <span>الطبيعية</span></div></div>
-  <div class="ibox reveal">
-    <div class="ibttl" id="ibttl">22 مكوناً مدعوماً علمياً</div>
-    <div class="ibsub" id="ibsub">كل مكون بجرعة مدروسة</div>
-    <div class="ichips" id="ichips"></div>
-  </div>
+  <div class="pgrid" id="dgrid"></div
 
   <div class="sp"></div>
   <div class="sh reveal"><div class="sht" id="swhy">لماذا <span>فجر؟</span></div></div>
@@ -841,32 +833,12 @@ textarea.rfld{height:65px;resize:none}
   </div>
 </div>
 
-<!-- ==================== INGREDIENTS PAGE ==================== -->
-<div id="pg-ingredients" class="pg">
-  <div class="pghdr"><button class="bkbtn" onclick="goPg('home')">&#8592; رجوع</button><div class="pgttl">مكونات فجر</div></div>
-  <div style="padding:18px 14px 100px">
-    <p style="color:var(--muted);font-size:13px;line-height:1.7;text-align:center;margin-bottom:22px">تركيبة فجر تحتوي على مكونات طبيعية مختارة بعناية.<br><span style="color:var(--brand);font-weight:700">التركيبة الأساسية سرية ومحمية.</span></p>
-    <div class="ingr-card">
-      <div class="ingr-card-hd">
-        <div class="ingr-card-ico">🍄</div>
-        <div><div class="ingr-card-nm">فطر الشاغا</div><div class="ingr-card-en">Chaga Mushroom Extract</div></div>
-        <div class="ingr-card-badge">✓ معتمد</div>
-      </div>
-      <p class="ingr-card-desc">غني بمضادات الأكسدة القوية ومركبات البيتا-جلوكان الطبيعية.</p>
-      
-    </div>
-    <div class="ingr-secret">
-      <div style="font-size:20px;margin-bottom:6px">🔒</div>
-      <div style="font-weight:700;color:var(--brand2);margin-bottom:4px">التركيبة الكاملة سرية</div>
-      <div style="font-size:12px;color:var(--muted);line-height:1.6">المكونات النشطة الرئيسية محمية كملكية فكرية</div>
-    </div>
-  </div>
-</div>
+
+   
 
 <!-- ==================== BOTTOM NAV ==================== -->
 <nav id="bnav" aria-label="تنقل">
   <button class="nb on"  onclick="goPg('home')"        id="nb-home"><div class="nb-ico">&#127968;</div><div class="nb-lbl" id="nb-hl">الرئيسية</div></button>
-  <button class="nb"     onclick="goPg('ingredients')" id="nb-ingr"><div class="nb-ico">&#9881;&#65039;</div><div class="nb-lbl" id="nb-il">مكونات</div></button>
   <button class="nb"     onclick="goPg('tracking')"    id="nb-track"><div class="nb-ico">&#128230;</div><div class="nb-lbl" id="nb-tl">طلباتي</div></button>
   <button class="nb"     onclick="goPg('contact')"     id="nb-cnt"><div class="nb-ico">&#128222;</div><div class="nb-lbl" id="nb-cntl">تواصل</div></button>
   <button class="nb"     onclick="goPg('account')"     id="nb-acct"><div class="nb-ico">&#128100;</div><div class="nb-lbl" id="nb-al">حسابي</div></button>
@@ -1871,10 +1843,6 @@ function applyLang(){
   document.getElementById('chbasic').textContent= AR ? 'أساسي' : 'Basic';
   document.getElementById('chprem').textContent = AR ? 'فاخر' : 'Premium';
   document.getElementById('chlim').textContent  = AR ? 'محدود' : 'Limited';
-  document.getElementById('chnew').textContent  = AR ? 'جديد' : 'New';
-  document.getElementById('singr').innerHTML    = AR ? 'مكوناتنا <span>الطبيعية</span>' : 'Natural <span>Ingredients</span>';
-  document.getElementById('ibttl').textContent  = AR ? '22 مكوناً مدعوماً علمياً' : '22 Science-Backed Ingredients';
-  document.getElementById('ibsub').textContent  = AR ? 'كل مكون بجرعة مدروسة' : 'Every ingredient at research-proven doses';
   document.getElementById('swhy').innerHTML     = AR ? 'لماذا <span>فجر؟</span>' : 'Why <span>FAJR?</span>';
   document.getElementById('sadvs').innerHTML    = AR ? 'مميزاتنا <span>الحصرية</span>' : 'Exclusive <span>Advantages</span>';
   document.getElementById('srevs').innerHTML    = AR ? 'آراء <span>عملائنا</span>' : 'Customer <span>Reviews</span>';
@@ -1958,7 +1926,6 @@ function applyLang(){
   document.getElementById('nortxt').textContent = AR ? 'لا توجد نتائج' : 'No results';
   document.getElementById('pdmstk').textContent = AR ? 'متوفر' : 'In Stock';
   document.getElementById('pdmql').textContent  = AR ? 'الكمية:' : 'Qty:';
-  document.getElementById('pdmigt').textContent = AR ? 'المكونات الرئيسية' : 'Key Ingredients';
   document.getElementById('revttl').textContent = AR ? 'التقييمات' : 'Reviews';
   document.getElementById('revwl').textContent  = AR ? 'اكتب تقييمك' : 'Write your review';
   document.getElementById('rvsub').textContent  = AR ? 'نشر' : 'Post';
