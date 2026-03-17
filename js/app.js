@@ -1,28 +1,35 @@
-const products = [
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-{
-name:"FAJR ENERGY",
-price:"30 SAR",
-image:"images/fajr-energy.png"
+function addToCart(name, price, image) {
+
+    const item = cart.find(p => p.name === name);
+
+    if (item) {
+        item.quantity += 1;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            image: image,
+            quantity: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("تمت إضافة المنتج إلى السلة");
 }
 
-];
+function getCartCount(){
 
-const container = document.getElementById("products");
+    const count = cart.reduce((total,item)=> total + item.quantity ,0);
 
-products.forEach(product => {
+    const badge = document.getElementById("cart-count");
 
-const card = document.createElement("div");
+    if(badge){
+        badge.innerText = count;
+    }
 
-card.className = "product";
+}
 
-card.innerHTML = `
-<img src="${product.image}" width="200">
-<h3>${product.name}</h3>
-<p>${product.price}</p>
-<button>شراء</button>
-`;
-
-container.appendChild(card);
-
-});
+getCartCount();
