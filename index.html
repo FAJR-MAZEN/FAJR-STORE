@@ -759,7 +759,7 @@ function getImg(id){ return PROD_IMGS[id] || PROD_IMGS[0]; }
 
 // ===== PRODUCTS =====
 var PRODS = [
-  {id:0,type:'pouch',cat:'basic',price:39,
+  {id:0,type:'pouch',cat:'basic',price:45,
    nAr:'فجر فلايم بيرست',nEn:'Flame Burst Pouch',
    bAr:'الأكثر مبيعاً',bEn:'Best Seller',bCls:'bfire',
    dAr:'أكياس طاقة ذهنية بنكهة الفلفل الحار. 22 مكون طبيعي للتركيز والطاقة بلا كافيين.',
@@ -773,43 +773,43 @@ var PRODS = [
    dEn:'Mint energy pouches with an invigorating icy cool flavor. A refreshing experience.',
    ingrs:['L-Theanine 200mg','Alpha-GPC 300mg','Taurine 1000mg','Natural Mint','B12 1000mcg'],
    revs:[]},
-  {id:2,type:'pouch',cat:'premium',price:49,
+  {id:2,type:'pouch',cat:'premium',price:45,
    nAr:'فجر البداية',nEn:'Al-Bidaya - Start Strong',
    bAr:'فاخر',bEn:'Premium',bCls:'bgold',
    dAr:'الطاقة الذهبية. أكياس طاقة بتفاصيل التراث العربي. ابدأ كل يوم بقوة.',
    dEn:'Golden energy pouches with Arabian heritage aesthetic. Start every day strong.',
    ingrs:['L-Theanine 200mg','Alpha-GPC 300mg','Bacopa 120mg','B12 1000mcg','Ginkgo 60mg'],
    revs:[]},
-  {id:3,type:'can',cat:'new',price:25,
+  {id:3,type:'can',cat:'new',price:15,
    nAr:'فجر فلايم فاير',nEn:'Flame Fire Energy Drink',
    bAr:'مشروب طاقة',bEn:'Energy Drink',bCls:'bfire',
    dAr:'مشروب الطاقة الناري. زنجبيل، توابل، وتركيز لا حدود له. طاقة - تركيز - قوة.',
    dEn:'Fiery energy drink. Ginger, spices, unlimited focus. Energy · Focus · Power · Boost.',
    ingrs:['Taurine 1000mg','B12 1000mcg','Ginger Extract','Dates Extract','Lemon'],
    revs:[]},
-  {id:4,type:'can',cat:'new',price:25,
+  {id:4,type:'can',cat:'new',price:15,
    nAr:'فجر آيسي منت',nEn:'Icy Mint Energy Drink',
    bAr:'مشروب طاقة',bEn:'Energy Drink',bCls:'bice',
    dAr:'مشروب طاقة بالنعناع والليمون. انتعاش حقيقي وتركيز مستمر. طاقة - انتعاش - تعزيز.',
    dEn:'Mint and lemon energy drink. Real refreshment and sustained focus. Energy · Refresh · Boost.',
    ingrs:['Taurine 1000mg','B12 1000mcg','Natural Mint','Lemon Extract','B6 10mg'],
    revs:[]},
-  {id:5,type:'can',cat:'premium',price:25,
+  {id:5,type:'can',cat:'premium',price:15,
    nAr:'فجر داون',nEn:'FAJR Dawn Energy Drink',
    bAr:'ذهبي فاخر',bEn:'Golden Premium',bCls:'bgold',
    dAr:'مشروب طاقة الفجر الذهبي. عسل، تمر، وتوابل عربية. طاقة - تركيز - تجديد - تعزيز.',
    dEn:'Golden dawn energy drink. Honey, dates, and Arabian spices. Energy · Focus · Revive · Boost.',
    ingrs:['Honey Extract','Dates Extract','Taurine 1000mg','B12 1000mcg','Star Anise'],
    revs:[]},
-  {id:6,type:'bundle',cat:'limited',price:129,
+  {id:6,type:'bundle',cat:'limited',price:135,
    nAr:'الثلاثي - أكياس الطاقة',nEn:'Triple Pouch Bundle',
    bAr:'باقة ثلاثية',bEn:'Bundle',bCls:'bbundle',
    dAr:'باقة الأكياس الثلاثية: فلايم بيرست + آيسي فريش + البداية. اختبر كل النكهات بسعر مخفض.',
    dEn:'Triple pouch bundle: Flame Burst + Icy Fresh + Al-Bidaya. Try all flavors at a discount.',
    ingrs:['Flame Burst Pouch','Icy Fresh Pouch','Al-Bidaya Pouch'],
    revs:[]},
-  {id:7,type:'bundle',cat:'limited',price:69,
-   nAr:'باقة العلب الثلاثية - هدية مميزة',nEn:'3-Can Gift Pack',
+  {id:7,type:'bundle',cat:'limited',price:45,
+   nAr:'باقة العلب الثلاثية - ',nEn:'3-Can Gift Pack',
    bAr:'هدية مثالية',bEn:'Gift Pack',bCls:'bbundle',
    dAr:'باقة هدايا 3 علب: فلايم فاير + آيسي منت + داون. الهدية المثالية لمحبي الطاقة الطبيعية.',
    dEn:'3-can gift pack: Flame Fire + Icy Mint + Dawn. The perfect gift for natural energy lovers.',
@@ -837,17 +837,17 @@ var WHY_DATA = [
 
 var GREVS = [
   {n:'Ahmed Al-Mutairi',av:'A',s:5,bAr:'فجر غيّر روتيني اليومي! طاقة حقيقية بلا توتر',bEn:'FAJR changed my daily routine! Real energy without jitters',p:'Flame Burst'},
-  {n:'Sara Al-Zahrani',av:'S',s:5,bAr:'آيسي فريش - أفضل شيء جربته من زمان',bEn:'Icy Fresh - best thing I tried in a long time',p:'Icy Fresh'},
-  {n:'Mohammed Al-Otaibi',av:'M',s:5,bAr:'داون يستأهل كل ريال! الطعم رهيب',bEn:'Dawn is worth every riyal! The taste is amazing',p:'Dawn Can'},
-  {n:'Khalid Al-Qahtani',av:'K',s:5,bAr:'باقة الهدايا - هديتها لصديقي وانبسط',bEn:'Gift pack - gave it to my friend and he loved it',p:'3-Can Gift'},
-  {n:'Noura Al-Harbi',av:'N',s:5,bAr:'سريع التأثير وطعمه حلو - البداية الأحسن',bEn:'Fast-acting and tastes great - Al-Bidaya is best',p:'Al-Bidaya'}
+  {n:'Sara Al-Zahrani',av:'S',s:5,bAr:'آيسي فريش - أفضل شيء جربته من انصحكم',bEn:'Icy Fresh - best thing I tried in a long time',p:'Icy Fresh'},
+  {n:'Mohammed Al-Otaibi',av:'M',s:5,bAr:' يستأهل كل ريال! رهيب ',bEn:'Dawn is worth every riyal! The taste is amazing',p:'Dawn Can'},
+  {n:'Khalid Al-Qahtani',av:'K',s:5,bAr:'باقة الهدايا - هديتها لصديقي وفعلا شاف الفرق',bEn:'Gift pack - gave it to my friend and he loved it',p:'3-Can Gift'},
+  {n:'Noura Al-Harbi',av:'N',s:5,bAr:'سريع التأثير وطعمه حلو - اللي لونه ازرق الأحسن',bEn:'Fast-acting and tastes great - Al-Bidaya is best',p:'Al-Bidaya'}
 ];
 
 var VALS = [
   {i:'\u{1F33F}',tAr:'طبيعي 100%',tEn:'100% Natural',dAr:'بدون مواد اصطناعية',dEn:'No synthetics'},
   {i:'\u{1F52C}',tAr:'مدعوم علمياً',tEn:'Science-Backed',dAr:'أبحاث مثبتة',dEn:'Proven research'},
   {i:'\u{1F1F8}\u{1F1E6}',tAr:'هوية سعودية',tEn:'Saudi Identity',dAr:'براند أصيل',dEn:'Authentic brand'},
-  {i:'\u{1F49A}',tAr:'بلا أعراض',tEn:'Side-Effect Free',dAr:'آمن تماماً',dEn:'Completely safe'}
+  {i:'\u{1F49A}',tAr:' آمن',tEn:'Side-Effect Free',dAr:'آمن تماماً',dEn:'Completely safe'}
 ];
 
 // STATE
