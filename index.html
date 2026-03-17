@@ -842,16 +842,6 @@ textarea.rfld{height:65px;resize:none}
 </div>
 
 <!-- ==================== INGREDIENTS PAGE ==================== -->
-<div id="pg-ingredients" class="pg">
-  <div class="pghdr"><button class="bkbtn" onclick="goPg('home')">&#8592; رجوع</button><div class="pgttl">مكونات فجر</div></div>
-  <div style="padding:18px 14px 100px">
-    <p style="color:var(--muted);font-size:13px;line-height:1.7;text-align:center;margin-bottom:22px">تركيبة فجر تحتوي على مكونات طبيعية مختارة بعناية.<br><span style="color:var(--brand);font-weight:700">التركيبة الأساسية سرية ومحمية.</span></p>
-    <div class="ingr-card">
-      <div class="ingr-card-hd">
-        <div class="ingr-card-ico">🍄</div>
-        <div><div class="ingr-card-nm">فطر الشاغا</div><div class="ingr-card-en">Chaga Mushroom Extract</div></div>
-        <div class="ingr-card-badge">✓ معتمد</div>
-      </div>
       <p class="ingr-card-desc">غني بمضادات الأكسدة القوية ومركبات البيتا-جلوكان الطبيعية.</p>
       
     </div>
@@ -918,6 +908,7 @@ textarea.rfld{height:65px;resize:none}
       </div>
       <div class="pdmfts" id="pdmfts"></div>
       <div class="pdmigr">
+        <div class="pdmigt" id="pdmigt">المكونات الرئيسية</div>
         <div class="itags" id="pdmitags"></div>
       </div>
       <div style="background:rgba(255,59,59,.07);border:1px solid rgba(255,59,59,.25);border-radius:12px;padding:12px 14px;margin-bottom:14px;display:flex;align-items:flex-start;gap:10px"><span style="font-size:20px;flex-shrink:0">⚠️</span><div><strong style="display:block;font-size:12px;color:#ff8080;margin-bottom:3px">تحذير هام</strong><span style="font-size:11px;color:rgba(255,150,150,.85);line-height:1.7">هذا المنتج مخصص للاستخدام تحت الشفة فقط. يُمنع ابتلاعه. احفظه بعيداً عن متناول الأطفال.</span></div></div>
@@ -1882,6 +1873,7 @@ function applyLang(){
   document.getElementById('ni-cnt').textContent = AR ? 'تواصل' : 'Contact';
   document.getElementById('ni-abt').textContent = AR ? 'عن فجر' : 'About';
   document.getElementById('nb-hl').textContent  = AR ? 'الرئيسية' : 'Home';
+  document.getElementById('nb-il').textContent  = AR ? 'مكونات' : 'Ingredients';
   document.getElementById('nb-tl').textContent  = AR ? 'طلباتي' : 'Orders';
   document.getElementById('nb-cntl').textContent= AR ? 'تواصل' : 'Contact';
   document.getElementById('nb-al').textContent  = AR ? 'حسابي' : 'Account';
@@ -1955,6 +1947,7 @@ function applyLang(){
   document.getElementById('nortxt').textContent = AR ? 'لا توجد نتائج' : 'No results';
   document.getElementById('pdmstk').textContent = AR ? 'متوفر' : 'In Stock';
   document.getElementById('pdmql').textContent  = AR ? 'الكمية:' : 'Qty:';
+  document.getElementById('pdmigt').textContent = AR ? 'المكونات الرئيسية' : 'Key Ingredients';
   document.getElementById('revttl').textContent = AR ? 'التقييمات' : 'Reviews';
   document.getElementById('revwl').textContent  = AR ? 'اكتب تقييمك' : 'Write your review';
   document.getElementById('rvsub').textContent  = AR ? 'نشر' : 'Post';
