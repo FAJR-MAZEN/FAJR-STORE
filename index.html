@@ -864,12 +864,34 @@ var AR=true,wish=[],loggedIn=false,user={},curP=null,pdmQty=1,pickedStar=0,pdmIm
 })();
 
 // ==================== BOOT ====================
-window.addEventListener('load', function(){  function hideLdr(){var l=document.getElementById('ldr');if(l)l.classList.add('hide');}
-  setTimeout(hideLdr,800);
-  setTimeout(hideLdr,2500);
-try{renderAll();}catch(e){console.error('renderAll ERROR:',e);hideLdr();}
-hideLdr();  try{initScrollReveal();}catch(e){}
-  try{loadWishFromStorage();}catch(e){}
+window.addEventListener('load', function(){
+
+  function hideLdr(){
+    var l = document.getElementById('ldr');
+    if(l) {
+      l.classList.add('hide');
+      l.style.display = 'none'; // 💣 إجبار الإخفاء
+    }
+  }
+
+  // 🟢 يخفيه مباشرة
+  hideLdr();
+
+  // 🟢 احتياط بعد 1 ثانية
+  setTimeout(hideLdr, 1000);
+
+  // 🟢 احتياط قوي بعد 3 ثواني
+  setTimeout(hideLdr, 3000);
+
+  // ❗ لا تخلي renderAll يوقف الموقع
+  try {
+    if(typeof renderAll === "function"){
+      renderAll();
+    }
+  } catch(e){
+    console.error("ERROR:", e);
+  }
+
 });
 
 // ==================== SCROLL REVEAL ====================
