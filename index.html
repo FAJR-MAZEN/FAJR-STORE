@@ -1027,5 +1027,25 @@ window.addEventListener('scroll', function () {
 
 
 </script>
+  <script>
+(function(){
+  function forceHide(){
+    var l = document.getElementById('ldr');
+    if(l){
+      l.style.display = 'none';
+    }
+  }
+
+  // يخفيه بعد 1 ثانية
+  setTimeout(forceHide, 1000);
+
+  // يخفيه بعد 3 ثواني (احتياط)
+  setTimeout(forceHide, 3000);
+
+  // يخفيه بعد تحميل الصفحة
+  window.onload = forceHide;
+
+})();
+</script>
 </body>
 </html>
